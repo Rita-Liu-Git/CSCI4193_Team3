@@ -1,0 +1,53 @@
+<ons-page id="signup"`>
+    <div class="background" style="background-color: #E2F1F1"></div>
+    <div style="height: 100%; display: flex; align-items: center; justify-content: center;">
+        <div style="width: 80%">
+            <div style="text-align: center">
+                <img src="lib/logo.svg" height="30px">
+            </div>
+            <div style="height: 100px"></div>
+            <div>
+                <textarea class="textarea" style="width:100%; border-radius: 12px;" rows="1" placeholder="Username"></textarea>
+            </div>
+            <div style="padding-top: 20px">
+                <textarea class="textarea" style="width:100%; border-radius: 12px;" rows="1" placeholder="Email"></textarea>
+            </div>
+            <div style="padding-top: 20px">
+                <textarea id="loginPassword" class="textarea" style="width:100%; border-radius: 12px;" rows="1" placeholder="Password"></textarea>
+            </div>
+            <div style="padding-top: 20px">
+                <textarea class="textarea" style="width:100%; border-radius: 12px;" rows="1" placeholder="Confirm password"></textarea>
+            </div>
+            <div style="text-align: center; margin-top: 50px">
+                <ons-button id="signupStudent" style="background-color: #417876; border-radius: 15px; padding-right: 20px; padding-left: 20px"><span style="color: white">Student sign-up</span></ons-button>
+            </div>
+            <div style="margin-top: 10px; text-align: center">
+                <span>or</span>
+            </div>
+            <div style="text-align: center; margin-top: 10px">
+                <ons-button
+                        style="background-color: #417876; border-radius: 15px; padding-right: 20px; padding-left: 20px">
+                    <span style="color: white">Advisor sign-up</span></ons-button>
+            </div>
+            <div style="text-align: center; margin-top: 10px">
+                <span style="font-size: small; color: #417876">Already have an account?</span>
+            </div>
+            <div style="text-align: center; margin-top: 5px; display: flex; align-items: center; justify-content: center">
+                <ons-if platform="android">
+                    <div style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); text-align: center; background-color: white; border-radius: 30px; width: fit-content">
+                        <ons-back-button class="changeBackButtonColor"></ons-back-button>
+                    </div>
+                    <div style="margin-top: 4px"><span style="color: #5DADA8;">Login</span></div>
+                </ons-if>
+                <ons-if platform="ios">
+                    <ons-back-button class="fadeBackButton" style="margin-right: 10px">
+                        <ons-button id="loginButton" modifier="small" style="background-color: #5DADA8; border-radius: 15px; padding-right: 10px; padding-left: 10px">
+                            <span style="color: white">Login</span>
+                        </ons-button>
+                    </ons-back-button>
+                </ons-if>
+            </div>
+        </div>
+    </div>
+    <!-- Auto-positioned Tabbar: top on Android, bottom on iOS/other. -->
+</ons-page>
