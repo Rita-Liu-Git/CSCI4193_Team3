@@ -1,9 +1,6 @@
 <ons-page id="home">
     <div class="background" style="background-color: #E2F1F1"></div>
     <div style="padding-left: 15px">
-        <div>
-            <span><b>Home</b></span>
-        </div>
         <ons-row>
             <ons-col width="60%">
                 <div style="padding-top: 5px">
@@ -24,13 +21,13 @@
         </ons-row>
     </div>
     <div style="padding: 10px">
-        <ons-card style="background-color: #417876">
+        <ons-card id="progressChart" style="background-color: #417876">
             <div style="text-align: center">
                 <span style="color: white"><b>Your average monthly attendance and score</b></span>
             </div>
             <div>
                 <div>
-                    <canvas id="canvas"></canvas>
+                    <canvas class="canvas"></canvas>
                 </div>
             </div>
         </ons-card>
@@ -41,7 +38,7 @@
         </div>
     </div>
         <div style="padding-left: 10px; padding-right: 10px">
-            <ons-card style="background-color: #417876;">
+            <ons-card style="background-color: #417876; border-radius: 20px">
                 <ons-row>
                     <ons-col width="37%">
                         <div>
@@ -60,7 +57,7 @@
             </ons-card>
         </div>
         <div style="padding: 10px">
-            <ons-card style="background-color: #417876;">
+            <ons-card style="background-color: #417876; border-radius: 20px">
                 <ons-row>
                     <ons-col width="37%">
                         <div>
@@ -78,6 +75,9 @@
                 </ons-row>
             </ons-card>
         </div>
+    <div style="text-align: center; margin-top: 5px">
+        <ons-button id="moreRecommendations" modifier="small" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); background-color: white; border-radius: 15px; padding-right: 10px; padding-left: 10px"><span style="font-size: small; color: black; padding-right: 10px; padding-left: 10px;"><b>More...</b></span></ons-button>
+    </div>
     <div style="padding-left: 15px">
         <div style="padding-top: 10px">
             <span><b>Upcoming events</b></span>
@@ -86,7 +86,7 @@
     <div style="padding: 15px">
         <div>
             <div style="background-color: white; border-radius: 15px; text-align: center">
-                <ons-card style="background-color: #417876; margin: 0px">
+                <ons-card style="background-color: #417876; margin: 0px; border-radius: 20px">
                     <ons-row>
                         <ons-col width="37%">
                             <div>
@@ -95,10 +95,10 @@
                         </ons-col>
                         <ons-col width="63%" style="align-items: center">
                             <div>
-                                <span style="color: white"><b>Enjoy the outdoors</b></span>
+                                <span style="color: white"><b>Sleep therapy</b></span>
                             </div>
                             <div>
-                                <span style="color: white">Going outdoors enhances creativity.</span>
+                                <span style="color: white">Join this online classroom for a good experience.</span>
                             </div>
                         </ons-col>
                     </ons-row>
@@ -108,3 +108,4 @@
         </div>
     </div>
 </ons-page>
+

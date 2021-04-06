@@ -20,154 +20,54 @@
 
 <body>
 
-  <!-- First navigation component: Navigator. This will remain always on top of the app. -->
-  <ons-navigator id="myNavigator" page="splitter.html">
-  </ons-navigator>
+<ons-navigator id="myNavigator" page="splitter.html"></ons-navigator>
 
+<!-- Second navigation component: Splitter. This will disappear if the first component changes its content. -->
+<template id="splitter.html">
+  <ons-page>
+    <ons-splitter id="mySplitter">
+      <ons-splitter-side page="html/menu.html" swipeable width="250px" collapse swipe-target-width="50px">
+      </ons-splitter-side>
+      <ons-splitter-content page="tabbar.html">
+      </ons-splitter-content>
+    </ons-splitter>
+  </ons-page>
+</template>
 
-  <!-- Second navigation component: Splitter. This will disappear if the first component changes its content. -->
-  <template id="splitter.html">
-    <ons-page>
-      <ons-splitter id="mySplitter">
-        <ons-splitter-side page="html/menu.html" swipeable width="250px" collapse swipe-target-width="50px">
-        </ons-splitter-side>
-        <ons-splitter-content page="tabbar.html">
-        </ons-splitter-content>
-      </ons-splitter>
-    </ons-page>
-  </template>
+<!-- Third navigation component: Tabbar. This will disappear if the first or second components change their content. -->
+<template id="tabbar.html" >
+  <ons-page id="tabbarPage"`>
+      <div class="background" style="background-color: #E2F1F1"></div>
+      <div style="height: 100%; display: flex; align-items: center; justify-content: center;">
+        <div style="width: auto">
+          <div style="text-align: center">
+            <img src="lib/logo.svg" height="30px">
+          </div>
+            <div style="height: 100px"></div>
+          <div>
+            <textarea class="textarea" style="width:100%; border-radius: 12px;" rows="1" placeholder="Username"></textarea>
+          </div>
+          <div style="padding-top: 20px">
+            <textarea id="loginPassword" class="textarea" style="width:100%; border-radius: 12px;" rows="1" placeholder="Password"></textarea>
+          </div>
+          <div style="text-align: center; margin-top: 50px">
+            <ons-button id="login" style="background-color: #417876; border-radius: 15px; padding-right: 20px; padding-left: 20px"><span style="font-size: larger; color: white"><b>Login</b></span></ons-button>
+          </div>
+          <div style="text-align: center; margin-top: 10px">
+            <span style="font-size: small; color: #417876">Don't have an account?</span>
+          </div>
+          <div style="text-align: center; margin-top: 5px">
+            <ons-button modifier="small" style="background-color: #5DADA8; border-radius: 15px; padding-right: 10px; padding-left: 10px" id="clickButton"><span style="color: white">Sign-up</span></ons-button>
+          </div>
+          <div style="text-align: center; margin-top: 60px">
+            <img src="lib/biometric.svg" height="70px">
+          </div>
+        </div>
+      </div>
+    <!-- Auto-positioned Tabbar: top on Android, bottom on iOS/other. -->
+  </ons-page>
+</template>
 
-  <!-- Third navigation component: Tabbar. This will disappear if the first or second components change their content. -->
-  <template id="tabbar.html" >
-    <ons-page id="tabbarPage">
-      <!--<ons-toolbar style="background-color: #417876">
-        &lt;!&ndash;<div class="left">
-          &lt;!&ndash; Toolbar-button with different icons depending on the platform. &ndash;&gt;
-          <ons-toolbar-button component="button/menu">
-            <ons-icon icon="ion-navicon, material:md-menu" size="32px, material:24px"></ons-icon>
-          </ons-toolbar-button>
-        </div>&ndash;&gt;
-        <div class="center" style="color: white">Moments</div>
-        &lt;!&ndash;<div class="right">
-          &lt;!&ndash; Toolbar-button  only visible for iOS/other. &ndash;&gt;
-          <ons-if platform="ios other">
-            <ons-toolbar-button component="button/new-task">New</ons-toolbar-button>
-          </ons-if>
-        </div>&ndash;&gt;
-      </ons-toolbar>-->
-
-      <!-- Floating Action Button only visible for Android. -->
-      <ons-if platform="android">
-        <ons-fab position="right bottom" component="button/new-task">
-          <ons-icon icon="md-edit"></ons-icon>
-        </ons-fab>
-      </ons-if>
-
-      <!-- Auto-positioned Tabbar: top on Android, bottom on iOS/other. -->
-      <ons-tabbar id="myTabbar" position="auto">
-        <ons-tab page="html/messages.html">
-          <ons-icon icon="ion-chatbox" size="32px, material:24px"></ons-icon>
-        </ons-tab>
-        <ons-tab page="html/home.html" active>
-          <ons-icon icon="ion-home" size="32px, material:24px"></ons-icon>
-        </ons-tab>
-        <ons-tab page="html/profile.html">
-          <ons-icon icon="ion-person" size="32px, material:24px"></ons-icon>
-        </ons-tab>
-      </ons-tabbar>
-    </ons-page>
-  </template>
-
-  <script>
-    Chart.defaults.global.defaultColor= 'rgba(33,56,67,1)';
-    var MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-    var config = {
-      type: 'line',
-      data: {
-        labels: ['May', 'June', 'July'],
-        datasets: [{
-          label: 'My First dataset',
-          fontColor: "#FFFFFF",
-          borderColor: 'rgba(255, 255, 255, 0.8)',
-          backgroundColor: 'rgba(255, 255, 255, 0.8)',
-          data: [
-            50, 40, 5
-          ],
-        }, {
-          label: 'My Second dataset',
-          fontColor: "#FFFFFF",
-          borderColor: 'rgba(166, 227, 198, 0.8)',
-          backgroundColor: 'rgba(166, 227, 198, 0.8)',
-          data: [
-            10, 50, 30
-          ],
-        }]
-      },
-      options: {
-        responsive: true,
-        title: {
-          display: false,
-          text: 'Chart.js Line Chart - Stacked Area'
-        },
-        tooltips: {
-          mode: 'index',
-        },
-        hover: {
-          mode: 'index'
-        },
-        legend: {
-          display: false,
-          labels: {
-            fontColor: "#FFFFFF"
-          }
-        },
-        scales: {
-          xAxes: [{
-            ticks:{
-              display: true,
-              fontColor: "#FFFFFF"
-            },
-            display:true,
-            gridLines: {
-              display: false,
-              color: "#FFFFFF"
-            },
-            scaleLabel: {
-              display: false,
-              labelString: 'Month',
-              fontColor: "#FFFFFF",
-            }
-          }],
-          yAxes: [{
-            ticks:{
-              display: true,
-              stepSize: 50,
-              fontColor: "#FFFFFF"
-            },
-            display: true,
-            gridLines: {
-              display: false,
-              color: "#FFFFFF"
-            },
-            stacked: true,
-            scaleLabel: {
-              display: false,
-              fontColor: "#FFFFFF",
-              labelString: 'Value',
-            }
-          }]
-        }
-      }
-    };
-
-    window.onload = function() {
-      var ctx = document.getElementById('canvas').getContext('2d');
-      window.myLine = new Chart(ctx, config);
-    };
-
-    var colorNames = Object.keys(window.chartColors);
-
-  </script>
 </body>
 
 </html>

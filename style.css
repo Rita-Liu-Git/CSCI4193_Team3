@@ -2,6 +2,14 @@
  *** Custom CSS ***
  *****************/
 
+.changeBackButtonColor .back-button--material__icon {
+  fill: #5DADA8;
+}
+
+.fadeBackButton .back-button__icon {
+  fill: #E2F1F1;
+}
+
 .crop {
   width: 100px;
   height: 90px;
