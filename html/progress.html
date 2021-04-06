@@ -1,0 +1,31 @@
+<ons-page id="progress">
+    <div class="background" style="background-color: #E2F1F1"></div>
+    <ons-toolbar>
+        <div class="left">
+            <ons-back-button></ons-back-button></div>
+        <div class="center">Moments</div>
+    </ons-toolbar>
+    <div style="padding: 10px">
+        <ons-card style="background-color: #417876">
+            <div style="text-align: center">
+                <span style="color: white"><b>Your average monthly attendance and score</b></span>
+            </div>
+            <div>
+                <div>
+                    <canvas class="canvas"></canvas>
+                </div>
+            </div>
+        </ons-card>
+    </div>
+    <div style="display: flex; justify-content: center;">
+        <div style="width: 90%;">
+            <div style="text-align: center; padding: 15px;">
+                <ons-button modifier="small"
+                            style="background-color: #417876; border-radius: 15px;">
+                    <span style="color: white; padding-right: 10px; padding-left: 10px;"><b>December</b></span>
+                </ons-button>
+            </div>
+            <div><img src="lib/graphics/progress.svg"></div>
+        </div>
+    </div>
+</ons-page>
