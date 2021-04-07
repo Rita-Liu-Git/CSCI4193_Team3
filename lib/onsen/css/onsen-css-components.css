@@ -1646,7 +1646,6 @@ h4, h5, h6 {
   font-size: 14px;
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
-  text-transform: uppercase;
   background-color: #009688;
   color: #ffffff;
   font-weight: 500;
