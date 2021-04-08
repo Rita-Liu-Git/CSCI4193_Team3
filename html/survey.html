@@ -1,8 +1,9 @@
-<ons-page id="survey"`>
+<ons-page ` id="survey">
     <div class="background" style="background-color: #E2F1F1"></div>
     <ons-toolbar>
         <div class="left">
-            <ons-back-button></ons-back-button></div>
+            <ons-back-button></ons-back-button>
+        </div>
         <div class="center">Moments</div>
     </ons-toolbar>
     <div style="padding-top: 15px; padding-left: 15px">
@@ -16,17 +17,17 @@
             <ons-list style="border-radius: 15px">
                 <ons-list-item tappable>
                     <label class="left">
-                        <ons-radio name="introvert" input-id="radio-1"></ons-radio>
+                        <ons-radio input-id="radio-1" name="introvert"></ons-radio>
                     </label>
-                    <label for="radio-1" class="center">
+                    <label class="center" for="radio-1">
                         Yes
                     </label>
                 </ons-list-item>
                 <ons-list-item tappable>
                     <label class="left">
-                        <ons-radio name="introvert" input-id="radio-2"></ons-radio>
+                        <ons-radio input-id="radio-2" name="introvert"></ons-radio>
                     </label>
-                    <label for="radio-2" class="center">
+                    <label class="center" for="radio-2">
                         No
                     </label>
                 </ons-list-item>
@@ -41,17 +42,17 @@
             <ons-list style="border-radius: 15px">
                 <ons-list-item tappable>
                     <label class="left">
-                        <ons-radio name="anxiety" input-id="radio-3"></ons-radio>
+                        <ons-radio input-id="radio-3" name="anxiety"></ons-radio>
                     </label>
-                    <label for="radio-3" class="center">
+                    <label class="center" for="radio-3">
                         Yes
                     </label>
                 </ons-list-item>
                 <ons-list-item tappable>
                     <label class="left">
-                        <ons-radio name="anxiety" input-id="radio-4"></ons-radio>
+                        <ons-radio input-id="radio-4" name="anxiety"></ons-radio>
                     </label>
-                    <label for="radio-4" class="center">
+                    <label class="center" for="radio-4">
                         No
                     </label>
                 </ons-list-item>
@@ -66,17 +67,17 @@
             <ons-list style="border-radius: 15px">
                 <ons-list-item tappable>
                     <label class="left">
-                        <ons-radio name="president" input-id="radio-5"></ons-radio>
+                        <ons-radio input-id="radio-5" name="president"></ons-radio>
                     </label>
-                    <label for="radio-5" class="center">
+                    <label class="center" for="radio-5">
                         Trump
                     </label>
                 </ons-list-item>
                 <ons-list-item tappable>
                     <label class="left">
-                        <ons-radio name="president" input-id="radio-6"></ons-radio>
+                        <ons-radio input-id="radio-6" name="president"></ons-radio>
                     </label>
-                    <label for="radio-6" class="center">
+                    <label class="center" for="radio-6">
                         Biden
                     </label>
                 </ons-list-item>
@@ -84,6 +85,8 @@
         </div>
     </div>
     <div style="text-align: center; margin-top: 50px">
-        <ons-button id="nextHome" style="background-color: #417876; border-radius: 15px; padding-right: 20px; padding-left: 20px"><span style="font-size: larger; color: white">Finish</span></ons-button>
+        <ons-button id="nextHome"
+                    style="background-color: #417876; border-radius: 15px; padding-right: 20px; padding-left: 20px">
+            <span style="font-size: larger; color: white">Finish</span></ons-button>
     </div>
 </ons-page>

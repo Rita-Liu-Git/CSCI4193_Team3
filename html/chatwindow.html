@@ -1,42 +1,47 @@
 <ons-page id="chatwindow">
     <div class="background" style="background-color: #E2F1F1"></div>
-        <ons-toolbar>
-            <div class="left">
-                <ons-back-button></ons-back-button></div>
-            <div class="center">Moments</div>
-        </ons-toolbar>
-        <div style="background-color: #417876;">
-            <div style="padding: 5px">
-                <ons-row style="display: flex; justify-content: center; align-items: center">
-                    <ons-col width="20%">
-                        <img height="50px" width="50px" src="lib/avatars/alex.jpg" style="border-radius: 25px; margin-left: 10px">
-                    </ons-col>
-                    <ons-col width="50%" style="text-align: left">
-                        <div>
-                            <span style="color: white"><b>Alex</b></span>
-                        </div>
-                        <div>
-                            <span style="color: white; font-size: small">Yesterday, 2:56 PM</span>
-                        </div>
-                    </ons-col>
-                    <ons-col width="30%" style="text-align: right">
-                        <div>
-                            <ons-icon icon="ion-ios-videocam" size="32px" style="color: white;"></ons-icon>&nbsp;&nbsp;<ons-icon icon="ion-ios-telephone" size="32px" style="color: white; padding-right: 10px"></ons-icon>
-                        </div>
-                    </ons-col>
-                </ons-row>
-            </div>
+    <ons-toolbar>
+        <div class="left">
+            <ons-back-button></ons-back-button>
         </div>
-        <div style="height: 90%; display: flex; align-items: flex-end">
-            <div style="background-color: white; width: 100%">
-                <ons-row>
-                    <ons-col width="95%">
-                        <textarea class="textarea" style="width:100%; border-radius: 12px; padding-left: 10px; padding-right: 10px" rows="1" placeholder="Write message"></textarea>
-                    </ons-col>
-                    <ons-col width="5%">
-                        <ons-icon icon="ion-android-send" size="20px" style="color: #417876"></ons-icon>
-                    </ons-col>
-                </ons-row>
-            </div>
+        <div class="center">Moments</div>
+    </ons-toolbar>
+    <div style="background-color: #417876;">
+        <div style="padding: 5px">
+            <ons-row style="display: flex; justify-content: center; align-items: center">
+                <ons-col width="20%">
+                    <img height="50px" src="lib/avatars/alex.jpg" style="border-radius: 25px; margin-left: 10px"
+                         width="50px">
+                </ons-col>
+                <ons-col style="text-align: left" width="50%">
+                    <div>
+                        <span style="color: white"><b>Alex</b></span>
+                    </div>
+                    <div>
+                        <span style="color: white; font-size: small">Yesterday, 2:56 PM</span>
+                    </div>
+                </ons-col>
+                <ons-col style="text-align: right" width="30%">
+                    <div>
+                        <ons-icon icon="ion-ios-videocam" size="32px" style="color: white;"></ons-icon>&nbsp;&nbsp;<ons-icon
+                            icon="ion-ios-telephone" size="32px" style="color: white; padding-right: 10px"></ons-icon>
+                    </div>
+                </ons-col>
+            </ons-row>
         </div>
+    </div>
+    <div style="height: 90%; display: flex; align-items: flex-end">
+        <div style="background-color: white; width: 100%">
+            <ons-row>
+                <ons-col width="95%">
+                    <textarea class="textarea"
+                              placeholder="Write message" rows="1"
+                              style="width:100%; border-radius: 12px; padding-left: 10px; padding-right: 10px"></textarea>
+                </ons-col>
+                <ons-col width="5%">
+                    <ons-icon icon="ion-android-send" size="20px" style="color: #417876"></ons-icon>
+                </ons-col>
+            </ons-row>
+        </div>
+    </div>
 </ons-page>

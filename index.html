@@ -25,7 +25,6 @@
 
 <ons-navigator id="myNavigator" page="splitter.html"></ons-navigator>
 
-<!-- Second navigation component: Splitter. This will disappear if the first component changes its content. -->
 <template id="splitter.html">
   <ons-page>
     <ons-splitter id="mySplitter">
@@ -37,7 +36,6 @@
   </ons-page>
 </template>
 
-<!-- Third navigation component: Tabbar. This will disappear if the first or second components change their content. -->
 <template id="tabbar.html" >
   <ons-page id="tabbarPage"`>
       <div class="background" style="background-color: #E2F1F1"></div>
@@ -49,38 +47,16 @@
             <div style="height: 100px"></div>
           <div id="firebaseui-auth-container"  style="width:100%; border-radius: 12px;" rows="1" ></div>
           <p id="loader"></p>
-<!--          <div>-->
-<!--            <textarea class="textarea" style="width:100%; border-radius: 12px;" rows="1" placeholder="Username"></textarea>-->
-<!--          </div>-->
-<!--          <div style="padding-top: 20px">-->
-<!--            <textarea id="loginPassword" class="textarea" style="width:100%; border-radius: 12px;" rows="1" placeholder="Password"></textarea>-->
-<!--          </div>-->
-<!--          <div style="text-align: center; margin-top: 50px">-->
-<!--            <ons-button id="login" style="background-color: #417876; border-radius: 15px; padding-right: 20px; padding-left: 20px"><span style="font-size: larger; color: white"><b>Login</b></span></ons-button>-->
-<!--          </div>-->
-<!--          <div style="text-align: center; margin-top: 10px">-->
-<!--            <span style="font-size: small; color: #417876">Don't have an account?</span>-->
-<!--          </div>-->
-<!--          <div style="text-align: center; margin-top: 5px">-->
-<!--            <ons-button modifier="small" style="background-color: #5DADA8; border-radius: 15px; padding-right: 10px; padding-left: 10px" id="clickButton"><span style="color: white">Sign-up</span></ons-button>-->
-<!--          </div>-->
           <div style="text-align: center; margin-top: 60px">
             <img src="lib/biometric.svg" height="70px">
           </div>
         </div>
       </div>
-    <!-- Auto-positioned Tabbar: top on Android, bottom on iOS/other. -->
   </ons-page>
 </template>
-<!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
 
-<!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
-
-<!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
 <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-analytics.js"></script>
-
-<!--Add Firebase products that you want to use-->
 <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-auth.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-firestore.js"></script>
 
@@ -136,10 +112,6 @@
   var uiConfig = {
     callbacks: {
       signInSuccessWithAuthResult: function(authResult, redirectUrl) {
-        // User successfully signed in.
-        // Return type determines whether we continue the redirect automatically
-        // or whether we leave that to developer to handle.
-        // document.querySelector('#myNavigator').pushPage('html/main.html');
         document.querySelector('#myNavigator').pushPage('html/main.html');
         return false;
       },
@@ -149,7 +121,6 @@
         document.getElementById('loader').style.display = 'none';
       }
     },
-    // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
     signInFlow: 'popup',
     signInSuccessUrl: '<url-to-redirect-to-on-success>',
     signInOptions: [
@@ -158,10 +129,6 @@
         requireDisplayName: false
       }
     ],
-    // // Terms of service url.
-    // tosUrl: '<your-tos-url>',
-    // // Privacy policy url.
-    // privacyPolicyUrl: '<your-privacy-policy-url>'
   };
 
   ui.start('#firebaseui-auth-container', uiConfig);

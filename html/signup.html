@@ -1,25 +1,31 @@
-<ons-page id="signup"`>
+<ons-page ` id="signup">
     <div class="background" style="background-color: #E2F1F1"></div>
     <div style="height: 100%; display: flex; align-items: center; justify-content: center;">
         <div style="width: 80%">
             <div style="text-align: center">
-                <img src="lib/logo.svg" height="30px">
+                <img height="30px" src="lib/logo.svg">
             </div>
             <div style="height: 100px"></div>
             <div>
-                <textarea class="textarea" style="width:100%; border-radius: 12px;" rows="1" placeholder="Username"></textarea>
+                <textarea class="textarea" placeholder="Username" rows="1"
+                          style="width:100%; border-radius: 12px;"></textarea>
             </div>
             <div style="padding-top: 20px">
-                <textarea class="textarea" style="width:100%; border-radius: 12px;" rows="1" placeholder="Email"></textarea>
+                <textarea class="textarea" placeholder="Email" rows="1"
+                          style="width:100%; border-radius: 12px;"></textarea>
             </div>
             <div style="padding-top: 20px">
-                <textarea id="signupPassword" class="textarea" style="width:100%; border-radius: 12px;" rows="1" placeholder="Password"></textarea>
+                <textarea class="textarea" id="signupPassword" placeholder="Password" rows="1"
+                          style="width:100%; border-radius: 12px;"></textarea>
             </div>
             <div style="padding-top: 20px">
-                <textarea id="signupConfirmPassword" class="textarea" style="width:100%; border-radius: 12px;" rows="1" placeholder="Confirm password"></textarea>
+                <textarea class="textarea" id="signupConfirmPassword" placeholder="Confirm password" rows="1"
+                          style="width:100%; border-radius: 12px;"></textarea>
             </div>
             <div style="text-align: center; margin-top: 50px">
-                <ons-button id="signupStudent" style="background-color: #417876; border-radius: 15px; padding-right: 20px; padding-left: 20px"><span style="color: white">Student sign-up</span></ons-button>
+                <ons-button id="signupStudent"
+                            style="background-color: #417876; border-radius: 15px; padding-right: 20px; padding-left: 20px">
+                    <span style="color: white">Student sign-up</span></ons-button>
             </div>
             <div style="margin-top: 10px; text-align: center">
                 <span>or</span>
@@ -41,7 +47,8 @@
                 </ons-if>
                 <ons-if platform="ios">
                     <ons-back-button class="fadeBackButton" style="margin-right: 10px">
-                        <ons-button id="loginButton" modifier="small" style="background-color: #5DADA8; border-radius: 15px; padding-right: 10px; padding-left: 10px">
+                        <ons-button id="loginButton" modifier="small"
+                                    style="background-color: #5DADA8; border-radius: 15px; padding-right: 10px; padding-left: 10px">
                             <span style="color: white">Login</span>
                         </ons-button>
                     </ons-back-button>
